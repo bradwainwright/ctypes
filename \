@@ -1,0 +1,14 @@
+CC = gcc
+COPT = -Wall -Wextra -pedantic-errors -std=c99 -fpic
+SOFLAG = -shared
+OPTIMISE = 
+TARGET = bin/_trans.so
+OBJS = bin/transpose.o
+SRC = src/transpose.c
+
+all: $(OBJS) 
+    $(CC) $(SOFLAG) -o $(TARGET) $(OBJS)
+
+transpose.o: $(SRC)
+    $(CC) -c $(SRC) $(COPT) -o $(OBJS)
+
