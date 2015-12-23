@@ -1,4 +1,4 @@
-# ctypes - comparison of matrix transpose, native python list, numpy, numpy with embedded ctypes and cyptes
+CTYPES§ - comparison of matrix transpose, native python list, numpy, numpy with embedded ctypes and cyptes
 
 Linux example.. havent tried other OS 
 First compile shared object .. ctypes seems to only work with .so
@@ -7,9 +7,10 @@ gcc command should look like this
  gcc -c src/transpose.c -Wall -Wextra -pedantic-errors -std=c99 -fpic -o bin/transpose.o
  gcc -shared -o bin/_trans.so bin/transpose.o
 
-run the test python script which uses timeit on test_ctypes.py 
+run the test python script which uses timeit on test_ctypes.py
+
 python src/test_ctypes.py 5 10
- shared object file is <your path>bin/_trans.so
+shared object file is <your path>bin/_trans.so
 
 test 1 - c transpose with ctypes and standard list: 
  10000 loops, best of 3: 1.56049728394 usec per loop 
