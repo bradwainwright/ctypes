@@ -12,5 +12,5 @@ all:	o1
 o1:    $(SRC)
 	$(CC) -c $(SRC) $(COPT) -o $(OBJS)
 clean: 
-	rm -rf $(OBJS) && rm -rf $(TARGET) 
+	rm -rf $(OBJS) && rm -rf $(TARGET) && rm -rf src/*.pyc 
 
